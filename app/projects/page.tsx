@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import { ArrowRight, Mic, FileText, Users, Building } from "lucide-react"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 const projects = [
   {
@@ -43,6 +45,7 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <div className="container max-w-screen-xl mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6">
@@ -94,6 +97,7 @@ export default function ProjectsPage() {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

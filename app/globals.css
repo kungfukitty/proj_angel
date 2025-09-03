@@ -4,77 +4,77 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color tokens to match 2025 design brief with orange/white palette */
-  --background: #ffffff; /* Primary background color */
-  --foreground: #4b5563; /* Main text color */
-  --card: rgba(255, 255, 255, 0.9); /* Card background with glassmorphism */
-  --card-foreground: #4b5563; /* Card text color */
-  --popover: rgba(255, 255, 255, 0.9); /* Popover background */
-  --popover-foreground: #4b5563; /* Popover text color */
-  --primary: #ea580c; /* Call-to-action buttons */
-  --primary-foreground: #ffffff; /* Text on primary buttons */
-  --secondary: #f97316; /* Secondary actions */
-  --secondary-foreground: #ffffff; /* Text on secondary buttons */
-  --muted: #fffbeb; /* Subtle backgrounds */
-  --muted-foreground: #4b5563; /* Muted text */
-  --accent: #f97316; /* Accent highlights */
-  --accent-foreground: #ffffff; /* Text on accent elements */
-  --destructive: #dc2626; /* Error states */
-  --destructive-foreground: #ffffff; /* Text on error elements */
-  --border: #e5e7eb; /* Border color */
-  --input: #ffffff; /* Input fields */
-  --ring: rgba(234, 88, 12, 0.5); /* Focus ring */
-  --chart-1: #ea580c; /* Chart color */
-  --chart-2: #f97316; /* Additional chart color */
-  --chart-3: #dc2626; /* Additional chart color */
-  --chart-4: #ef4444; /* Additional chart color */
-  --chart-5: #f59e0b; /* Additional chart color */
-  --radius: 0.5rem; /* Corner rounding */
-  --sidebar: #fef2f2; /* Sidebar background */
-  --sidebar-foreground: #4b5563; /* Sidebar text */
-  --sidebar-primary: #ea580c; /* Primary sidebar actions */
-  --sidebar-primary-foreground: #ffffff; /* Text on primary sidebar actions */
-  --sidebar-accent: #f97316; /* Sidebar accent */
-  --sidebar-accent-foreground: #ffffff; /* Text on sidebar accent */
-  --sidebar-border: #e5e7eb; /* Sidebar border color */
-  --sidebar-ring: rgba(234, 88, 12, 0.5); /* Sidebar focus ring */
+  /* Bright, modern color tokens inspired by contemporary web design */
+  --background: #ffffff; /* Clean white background */
+  --foreground: #4b5563; /* Dark gray for text */
+  --card: #fffbeb; /* Light cream for card backgrounds */
+  --card-foreground: #4b5563; /* Dark gray for card text */
+  --popover: #ffffff; /* White for popovers */
+  --popover-foreground: #4b5563; /* Dark gray for popover text */
+  --primary: #ea580c; /* Bright orange for primary actions */
+  --primary-foreground: #ffffff; /* White text on primary buttons */
+  --secondary: #f97316; /* Light accent orange */
+  --secondary-foreground: #ffffff; /* White text on secondary elements */
+  --muted: #f9fafb; /* Very light gray for muted elements */
+  --muted-foreground: #6b7280; /* Medium gray for muted text */
+  --accent: #f97316; /* Bright accent color */
+  --accent-foreground: #ffffff; /* White text on accent elements */
+  --destructive: #be123c; /* Rose color for destructive actions */
+  --destructive-foreground: #ffffff; /* White text for destructive buttons */
+  --border: #e5e7eb; /* Light gray for borders */
+  --input: #ffffff; /* White for input fields */
+  --ring: #ea580c; /* Bright orange for focus rings */
+  --chart-1: #f97316; /* Accent for charts */
+  --chart-2: #ea580c; /* Primary for charts */
+  --chart-3: #f9fafb; /* Muted for charts */
+  --chart-4: #4b5563; /* Dark gray for charts */
+  --chart-5: #ffffff; /* White for charts */
+  --radius: 0.5rem; /* Rounded corners */
+  --sidebar: #ffffff; /* White for sidebar */
+  --sidebar-foreground: #4b5563; /* Dark gray for sidebar text */
+  --sidebar-primary: #fffbeb; /* Light cream for sidebar background */
+  --sidebar-primary-foreground: #4b5563; /* Dark gray for sidebar text */
+  --sidebar-accent: #f97316; /* Bright orange for sidebar accents */
+  --sidebar-accent-foreground: #ffffff; /* White text for sidebar accents */
+  --sidebar-border: #e5e7eb; /* Light gray for sidebar border */
+  --sidebar-ring: #ea580c; /* Bright orange for sidebar focus */
 }
 
 .dark {
-  /* Dark mode maintains same modern orange palette */
-  --background: #1a1a1a;
-  --foreground: #ffffff;
-  --card: rgba(26, 26, 26, 0.9);
-  --card-foreground: #ffffff;
-  --popover: rgba(26, 26, 26, 0.9);
-  --popover-foreground: #ffffff;
+  /* Dark mode maintains the bright aesthetic with darker backgrounds */
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
   --primary: #f97316;
   --primary-foreground: #ffffff;
   --secondary: #ea580c;
   --secondary-foreground: #ffffff;
-  --muted: #2a2a2a;
-  --muted-foreground: #a1a1aa;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
   --accent: #f97316;
   --accent-foreground: #ffffff;
-  --destructive: #dc2626;
+  --destructive: #be123c;
   --destructive-foreground: #ffffff;
-  --border: #374151;
-  --input: #2a2a2a;
-  --ring: rgba(249, 115, 22, 0.5);
-  --sidebar: #1a1a1a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #f97316;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #ea580c;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: #f97316;
+  --sidebar: #0f172a;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #1e293b;
+  --sidebar-primary-foreground: #f1f5f9;
+  --sidebar-accent: #f97316;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #374151;
-  --sidebar-ring: rgba(249, 115, 22, 0.5);
+  --sidebar-border: #334155;
+  --sidebar-ring: #f97316;
 }
 
 @theme inline {
-  /* Updated font variables for modern typography */
-  --font-sans: var(--font-dm-sans);
-  --font-serif: var(--font-space-grotesk);
+  /* Modern typography with Work Sans and Open Sans */
+  --font-sans: var(--font-work-sans);
+  --font-serif: var(--font-open-sans);
   --font-mono: var(--font-geist-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -122,11 +122,12 @@
     @apply bg-background text-foreground;
   }
 
-  /* Added modern 2025 effects for glassmorphism and animations */
+  /* Modern glass effects with bright theme */
   .glass-effect {
     backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(233, 88, 12, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
   .floating-animation {
@@ -143,6 +144,7 @@
     }
   }
 
+  /* Vibrant gradient text using orange palette */
   .gradient-text {
     background: linear-gradient(135deg, #ea580c, #f97316);
     -webkit-background-clip: text;
@@ -152,5 +154,50 @@
 
   .geometric-shape {
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  }
+
+  /* Modern hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(233, 88, 12, 0.15);
+  }
+
+  /* Adding shimmer animation for premium hero text effect */
+  .shimmer-text {
+    position: relative;
+  }
+
+  .shimmer-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+    animation: shimmer 8s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .shimmer-text::before {
+      animation: none;
+    }
   }
 }
