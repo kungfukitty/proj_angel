@@ -21,7 +21,7 @@ export function Hero() {
         <p className="text-sm tracking-[0.2em] text-zinc-300 uppercase font-sans">CRYPTO EDUCATOR · ENTREPRENEUR</p>
 
         {/* Main headline with shimmer effect */}
-        <h1 className="font-serif text-5xl md:text-7xl leading-[0.95] bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent relative overflow-hidden shimmer-text">
+        <h1 className="font-serif text-5xl md:text-7xl leading-[1.1] pb-2 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent relative overflow-hidden shimmer-text">
           Angel Kellogg
         </h1>
 

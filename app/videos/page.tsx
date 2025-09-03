@@ -29,21 +29,26 @@ export default function VideosPage() {
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#0A0A0A]">
       <Header />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-serif font-bold mb-4 gradient-text">Video Content</h1>
-            <p className="text-xl text-muted-foreground">
+            <h1 className="text-4xl font-serif font-bold mb-4 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent">
+              Video Content
+            </h1>
+            <p className="text-xl text-zinc-300">
               Educational videos, interviews, and workshops to accelerate your crypto journey
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {videoSeries.map((series, index) => (
-              <Card key={index} className="glass-effect hover:shadow-lg transition-all duration-300 overflow-hidden">
-                <div className="aspect-video bg-muted">
+              <Card
+                key={index}
+                className="bg-zinc-900/50 border-zinc-800 backdrop-blur-sm hover:bg-zinc-900/70 transition-all duration-300 overflow-hidden"
+              >
+                <div className="aspect-video bg-zinc-800">
                   <img
                     src={series.thumbnail || "/placeholder.svg"}
                     alt={series.title}
@@ -51,22 +56,28 @@ export default function VideosPage() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl">{series.title}</CardTitle>
-                  <CardDescription>{series.description}</CardDescription>
+                  <CardTitle className="text-xl text-zinc-100">{series.title}</CardTitle>
+                  <CardDescription className="text-zinc-400">{series.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex justify-between text-sm text-muted-foreground mb-4">
+                  <div className="flex justify-between text-sm text-zinc-400 mb-4">
                     <span>{series.episodes} episodes</span>
                     <span>{series.duration}</span>
                   </div>
-                  <Button className="w-full">Watch Series</Button>
+                  <Button className="w-full bg-gradient-to-r from-[#D4AF37] to-[#FFD700] text-black hover:from-[#B8941F] hover:to-[#E6C200] transition-all duration-300">
+                    Watch Series
+                  </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline">
+            <Button
+              asChild
+              size="lg"
+              className="border-[#FFD700]/40 text-zinc-200 hover:border-[#FFD700]/70 bg-transparent hover:bg-zinc-900/50 transition-all duration-300"
+            >
               <a href="https://youtube.com/@angelkellogg" target="_blank" rel="noopener noreferrer">
                 Subscribe on YouTube
               </a>
