@@ -13,7 +13,35 @@ const app = express()
 const PORT = process.env.PORT || 3001
 
 // Middleware
-app.use(helmet())
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'", // Required for Next.js
+          "https://vercel.live",
+          "https://va.vercel-scripts.com",
+        ],
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'", // Required for styled-components and CSS-in-JS
+          "https://fonts.googleapis.com",
+        ],
+        fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
+        imgSrc: ["'self'", "data:", "https:", "blob:"],
+        connectSrc: ["'self'", "https://vercel.live", "https://va.vercel-scripts.com"],
+        frameSrc: ["'none'"],
+        objectSrc: ["'none'"],
+        baseUri: ["'self'"],
+        formAction: ["'self'"],
+        upgradeInsecureRequests: [],
+      },
+    },
+    crossOriginEmbedderPolicy: false,
+  }),
+)
 app.use(
   cors({
     origin: process.env.FRONTEND_URL || "http://localhost:3000",
@@ -46,7 +74,7 @@ MongoClient.connect(process.env.MONGODB_URI)
   .catch((error) => console.error("MongoDB connection error:", error))
 
 // Email transporter
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,

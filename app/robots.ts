@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.angelkellogg.com/sitemap.xml",
+    sitemap: "https://angelkellogg.com/sitemap.xml",
   }
 }
