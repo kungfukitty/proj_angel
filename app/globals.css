@@ -2,76 +2,76 @@
 @import "tw-animate-css";
 
 :root {
-  /* Premium black/gold color tokens for Angel Kellogg's brand */
-  --background: #0a0a0a; /* Rich black background */
-  --foreground: #f5f5f5; /* Light text */
-  --card: #18181b; /* Dark zinc card background */
-  --card-foreground: #f5f5f5; /* Light card text */
-  --popover: #18181b; /* Dark popover */
-  --popover-foreground: #f5f5f5; /* Light popover text */
-  --primary: #d4af37; /* Metallic gold primary */
-  --primary-foreground: #0a0a0a; /* Dark text on gold */
-  --secondary: #27272a; /* Dark zinc secondary */
-  --secondary-foreground: #f5f5f5; /* Light text on secondary */
-  --muted: #27272a; /* Dark muted background */
-  --muted-foreground: #a1a1aa; /* Medium gray muted text */
-  --accent: #ffd700; /* Bright gold accent */
-  --accent-foreground: #0a0a0a; /* Dark text on accent */
+  /* Enhanced luxury black/gold color tokens for Angel Kellogg's brand */
+  --background: #000000; /* Pure black for luxury background */
+  --foreground: #ffffff; /* Pure white for maximum contrast */
+  --card: #1a1a1a; /* Rich dark gray for card backgrounds with depth */
+  --card-foreground: #ffffff; /* White for card text */
+  --popover: #1a1a1a; /* Rich dark gray for popovers */
+  --popover-foreground: #ffffff; /* White for popover text */
+  --primary: #ffd700; /* Bright gold for primary accents */
+  --primary-foreground: #000000; /* Black text on gold */
+  --secondary: #2a2a2a; /* Elevated dark gray for secondary elements */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+  --muted: #404040; /* Medium gray for muted backgrounds */
+  --muted-foreground: #a3a3a3; /* Light gray for muted text */
+  --accent: #ffd700; /* Gold for call-to-action elements */
+  --accent-foreground: #000000; /* Black text on accent */
   --destructive: #dc2626; /* Red for destructive actions */
-  --destructive-foreground: #f5f5f5; /* Light text on destructive */
-  --border: #27272a; /* Dark border */
-  --input: #18181b; /* Dark input background */
-  --ring: #d4af37; /* Gold focus ring */
-  --chart-1: #d4af37; /* Gold for charts */
-  --chart-2: #ffd700; /* Bright gold for charts */
-  --chart-3: #27272a; /* Dark for charts */
-  --chart-4: #a1a1aa; /* Gray for charts */
-  --chart-5: #f5f5f5; /* Light for charts */
-  --radius: 0.5rem;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #f5f5f5;
-  --sidebar-primary: #d4af37;
-  --sidebar-primary-foreground: #0a0a0a;
+  --destructive-foreground: #ffffff; /* White text on destructive */
+  --border: #333333; /* Dark gray borders for subtle definition */
+  --input: #1a1a1a; /* Dark input backgrounds */
+  --ring: rgba(255, 215, 0, 0.5); /* Gold focus ring with transparency */
+  --chart-1: #ffd700; /* Gold for charts */
+  --chart-2: #ffa500; /* Orange-gold for charts */
+  --chart-3: #2a2a2a; /* Dark for charts */
+  --chart-4: #a3a3a3; /* Gray for charts */
+  --chart-5: #ffffff; /* White for charts */
+  --radius: 0.75rem; /* Slightly larger radius for modern feel */
+  --sidebar: #000000;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffd700;
+  --sidebar-primary-foreground: #000000;
   --sidebar-accent: #ffd700;
-  --sidebar-accent-foreground: #0a0a0a;
-  --sidebar-border: #27272a;
-  --sidebar-ring: #d4af37;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #333333;
+  --sidebar-ring: rgba(255, 215, 0, 0.5);
 }
 
 .dark {
-  --background: #f5f5f5; /* Light text background */
-  --foreground: #0a0a0a; /* Rich black text */
-  --card: #f5f5f5; /* Light card background */
-  --card-foreground: #0a0a0a; /* Rich black card text */
-  --popover: #f5f5f5; /* Light popover background */
-  --popover-foreground: #0a0a0a; /* Rich black popover text */
-  --primary: #0a0a0a; /* Rich black primary */
-  --primary-foreground: #d4af37; /* Metallic gold text on primary */
-  --secondary: #d4af37; /* Metallic gold secondary */
-  --secondary-foreground: #0a0a0a; /* Rich black text on secondary */
-  --muted: #a1a1aa; /* Medium gray muted background */
-  --muted-foreground: #27272a; /* Dark muted text */
-  --accent: #0a0a0a; /* Rich black accent */
-  --accent-foreground: #ffd700; /* Bright gold text on accent */
+  --background: #f8fafc; /* Light background for dark mode */
+  --foreground: #000000; /* Black text */
+  --card: #ffffff; /* White card background */
+  --card-foreground: #000000; /* Black card text */
+  --popover: #ffffff; /* White popover background */
+  --popover-foreground: #000000; /* Black popover text */
+  --primary: #000000; /* Black primary */
+  --primary-foreground: #ffd700; /* Gold text on primary */
+  --secondary: #f1f5f9; /* Light gray secondary */
+  --secondary-foreground: #000000; /* Black text on secondary */
+  --muted: #e2e8f0; /* Light muted background */
+  --muted-foreground: #64748b; /* Dark muted text */
+  --accent: #000000; /* Black accent */
+  --accent-foreground: #ffd700; /* Gold text on accent */
   --destructive: #dc2626; /* Red for destructive actions */
-  --destructive-foreground: #f5f5f5; /* Light text on destructive */
-  --border: #d4af37; /* Metallic gold border */
-  --input: #f5f5f5; /* Light input background */
-  --ring: #0a0a0a; /* Rich black focus ring */
-  --chart-1: #0a0a0a; /* Rich black for charts */
-  --chart-2: #d4af37; /* Metallic gold for charts */
-  --chart-3: #a1a1aa; /* Medium gray for charts */
-  --chart-4: #27272a; /* Dark for charts */
-  --chart-5: #ffd700; /* Bright gold for charts */
-  --radius: 0.5rem;
-  --sidebar: #f5f5f5;
-  --sidebar-foreground: #0a0a0a;
-  --sidebar-primary: #0a0a0a;
-  --sidebar-primary-foreground: #d4af37;
-  --sidebar-accent: #0a0a0a;
+  --destructive-foreground: #ffffff; /* White text on destructive */
+  --border: #e2e8f0; /* Light border */
+  --input: #ffffff; /* White input background */
+  --ring: rgba(0, 0, 0, 0.3); /* Black focus ring */
+  --chart-1: #000000; /* Black for charts */
+  --chart-2: #ffd700; /* Gold for charts */
+  --chart-3: #e2e8f0; /* Light gray for charts */
+  --chart-4: #64748b; /* Dark gray for charts */
+  --chart-5: #ffd700; /* Gold for charts */
+  --radius: 0.75rem;
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffd700;
+  --sidebar-accent: #000000;
   --sidebar-accent-foreground: #ffd700;
-  --sidebar-border: #d4af37;
-  --sidebar-ring: #0a0a0a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: rgba(0, 0, 0, 0.3);
 }
 
 @theme inline {
@@ -122,55 +122,76 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Added subtle texture background for depth */
+    background-image: radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.02) 0%, transparent 50%);
   }
 
-  /* Premium glass effects with black/gold theme */
+  /* Enhanced premium glass effects with improved depth */
   .glass-effect {
-    backdrop-filter: blur(20px);
-    background: rgba(24, 24, 27, 0.8);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(24px);
+    background: rgba(26, 26, 26, 0.85);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 215, 0, 0.1);
   }
 
+  /* Enhanced floating animation with more natural movement */
   .floating-animation {
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
   }
 
   @keyframes float {
     0%,
     100% {
-      transform: translateY(0px);
+      transform: translateY(0px) rotate(0deg);
     }
-    50% {
-      transform: translateY(-20px);
+    33% {
+      transform: translateY(-15px) rotate(0.5deg);
+    }
+    66% {
+      transform: translateY(-8px) rotate(-0.5deg);
     }
   }
 
-  /* Gold gradient text */
+  /* Enhanced gold gradient text with richer colors */
   .gradient-text {
-    background: linear-gradient(135deg, #d4af37, #ffd700);
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 50%, #ffd700 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease-in-out infinite;
   }
 
+  @keyframes gradientShift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Enhanced geometric shapes */
   .geometric-shape {
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
   }
 
-  /* Premium hover effects */
+  /* Premium hover effects with enhanced shadows */
   .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(255, 215, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.3);
   }
 
-  /* Shimmer animation for premium hero text effect */
+  /* Enhanced shimmer animation with more sophisticated effect */
   .shimmer-text {
     position: relative;
+    overflow: hidden;
   }
 
   .shimmer-text::before {
@@ -180,8 +201,8 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
-    animation: shimmer 8s ease-in-out infinite;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.6), rgba(255, 165, 0, 0.4), transparent);
+    animation: shimmer 6s ease-in-out infinite;
   }
 
   @keyframes shimmer {
@@ -196,13 +217,44 @@
     }
   }
 
+  /* New luxury card effect */
+  .luxury-card {
+    background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(42, 42, 42, 0.7));
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 215, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .luxury-card:hover {
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(255, 215, 0, 0.1), inset 0 1px 0 rgba(255, 215, 0, 0.1);
+  }
+
+  /* Enhanced button styles */
+  .premium-button {
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+    border: none;
+    color: #000000;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.3);
+  }
+
+  .premium-button:hover {
+    background: linear-gradient(135deg, #ffa500 0%, #ffd700 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+  }
+
   /* Respect reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {
-    .shimmer-text::before {
+    .shimmer-text::before,
+    .floating-animation,
+    .gradient-text {
       animation: none;
     }
-    .floating-animation {
-      animation: none;
+    .hover-lift:hover {
+      transform: none;
     }
   }
 }

@@ -28,30 +28,38 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="font-serif text-2xl font-bold gold-gradient-text">Angel Kellogg</span>
+    <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+
+      <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-4">
+        <Link href="/" className="flex items-center space-x-2 group">
+          <span className="font-serif text-2xl md:text-3xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300">
+            Angel Kellogg
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {navigation.map((item) => (
-            <Link key={item.name} href={item.href} className="transition-colors hover:text-primary relative group">
+            <Link
+              key={item.name}
+              href={item.href}
+              className="transition-all duration-300 hover:text-primary relative group py-2"
+            >
               {item.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/60 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
 
           <div className="relative group">
-            <button className="transition-colors hover:text-primary">More</button>
-            <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="p-2">
+            <button className="transition-colors duration-300 hover:text-primary py-2 font-medium">More</button>
+            <div className="absolute top-full left-0 mt-2 w-56 luxury-card rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+              <div className="p-3">
                 {moreNavigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block px-3 py-2 text-sm rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                    className="block px-4 py-3 text-sm rounded-lg hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium"
                   >
                     {item.name}
                   </Link>
@@ -62,7 +70,7 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button asChild variant="outline" size="sm">
+          <Button asChild className="premium-button rounded-xl px-6 py-2 font-semibold">
             <Link href="/join">Join</Link>
           </Button>
         </div>
@@ -70,25 +78,25 @@ export function Header() {
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="sm">
-              <Menu className="h-5 w-5" />
+            <Button variant="ghost" size="sm" className="hover:bg-primary/10">
+              <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <div className="flex flex-col space-y-4 mt-8">
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] luxury-card border-l border-primary/20">
+            <div className="flex flex-col space-y-6 mt-12">
               {[...navigation, ...moreNavigation].map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-lg font-medium transition-colors hover:text-primary"
+                  className="text-lg font-medium transition-colors duration-300 hover:text-primary py-2 border-b border-border/20 hover:border-primary/30"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-border">
-                <Button asChild className="w-full">
+              <div className="pt-6 border-t border-border/20">
+                <Button asChild className="premium-button w-full py-3 font-semibold">
                   <Link href="/join">Join</Link>
                 </Button>
               </div>

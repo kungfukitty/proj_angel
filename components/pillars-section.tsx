@@ -24,31 +24,35 @@ const pillars = [
 
 export function PillarsSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-zinc-900/50 to-black/50">
-      <div className="container max-w-screen-2xl px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+    <section className="py-32 bg-gradient-to-b from-background via-card/20 to-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5"></div>
+
+      <div className="container max-w-screen-2xl px-4 relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="font-serif text-4xl md:text-6xl font-bold mb-8">
             <span className="gradient-text">Three Pillars</span> of Success
           </h2>
-          <p className="text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
             The foundation of everything I do, from content creation to business ventures.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {pillars.map((pillar, index) => (
             <Card
               key={index}
-              className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 bg-zinc-900/30 backdrop-blur-sm border-zinc-700/50 hover:border-primary/50"
+              className="group luxury-card hover-lift floating-animation"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-primary/30 group-hover:to-secondary/30 transition-all duration-300">
-                  <pillar.icon className="w-8 h-8 text-primary" />
+              <CardContent className="p-10 text-center">
+                <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center group-hover:from-primary/30 group-hover:via-primary/20 transition-all duration-500 border border-primary/20 group-hover:border-primary/40">
+                  <pillar.icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold mb-4 text-white group-hover:text-primary transition-colors">
+
+                <h3 className="font-serif text-2xl md:text-3xl font-bold mb-6 text-foreground group-hover:text-primary transition-colors duration-300">
                   {pillar.title}
                 </h3>
-                <p className="text-zinc-300 leading-relaxed">{pillar.description}</p>
+                <p className="text-muted-foreground leading-relaxed text-lg font-light">{pillar.description}</p>
               </CardContent>
             </Card>
           ))}

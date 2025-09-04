@@ -5,17 +5,17 @@ import { Instagram, Twitter, Youtube, Linkedin } from "lucide-react"
 
 const footerLinks = {
   content: [
-    { name: "Videos", href: "/content/videos" },
-    { name: "Podcast", href: "/content/podcast" },
-    { name: "Blog", href: "/content/blog" },
+    { name: "Videos", href: "/videos" },
+    { name: "Podcast", href: "/podcast" },
+    { name: "Blog", href: "/blog" },
   ],
   projects: [
     { name: "BRGR Collective", href: "/brgr-collective" },
-    { name: "ForeverDocs", href: "/foreverdocs" },
+    { name: "ForeverDocs", href: "/forever-docs" },
     { name: "Community", href: "/community" },
   ],
   business: [
-    { name: "Partners", href: "/partners" },
+    { name: "Partners", href: "/business-partners" },
     { name: "Events", href: "/events" },
     { name: "Media Kit", href: "/media-kit" },
     { name: "Contact", href: "/contact" },
@@ -23,10 +23,10 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "YouTube", icon: Youtube, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
+  { name: "Instagram", icon: Instagram, href: "https://instagram.com/angelkellogg" },
+  { name: "Twitter", icon: Twitter, href: "https://twitter.com/angelkellogg" },
+  { name: "YouTube", icon: Youtube, href: "https://youtube.com/@angelkellogg" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/in/angelkellogg" },
 ]
 
 export function Footer() {
@@ -37,7 +37,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <span className="font-serif text-3xl font-bold gold-gradient-text">Angel Kellogg</span>
+              <span className="font-serif text-3xl font-bold gradient-text">Angel Kellogg</span>
             </Link>
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
               Bridging the gap between street hustle and blockchain innovation. Building wealth, community, and legacy
@@ -117,6 +117,9 @@ export function Footer() {
             </Link>
             <Link href="/terms" className="text-muted-foreground hover:text-primary text-sm transition-colors">
               Terms of Service
+            </Link>
+            <Link href="/about" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+              About
             </Link>
           </div>
         </div>
