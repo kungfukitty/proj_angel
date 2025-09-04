@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
@@ -32,9 +33,18 @@ export function Header() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center space-x-2 group">
-          <span className="font-serif text-2xl md:text-3xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300">
-            Angel Kellogg
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="relative w-10 h-10 md:w-12 md:h-12">
+            <Image
+              src="/logo-watermark.png"
+              alt="Angel K Logo"
+              fill
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
+              priority
+            />
+          </div>
+          <span className="font-serif text-xl md:text-2xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300">
+            Angel K
           </span>
         </Link>
 
