@@ -1,13 +1,11 @@
 {
-  "name": "angel-kellogg-website",
+  "name": "angel-kellogg",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "server": "node server.js",
-    "server:dev": "nodemon server.js",
     "start": "next start"
   },
   "dependencies": {
