@@ -232,18 +232,40 @@
 
   /* Enhanced button styles */
   .premium-button {
-    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
-    border: none;
-    color: #000000;
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%) !important;
+    border: none !important;
+    color: #000000 !important;
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 4px 16px rgba(255, 215, 0, 0.3);
   }
 
   .premium-button:hover {
-    background: linear-gradient(135deg, #ffa500 0%, #ffd700 100%);
+    background: linear-gradient(135deg, #ffa500 0%, #ffd700 100%) !important;
+    color: #000000 !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+  }
+
+  /* Added stronger specificity for premium button text elements to ensure proper contrast */
+  .premium-button,
+  .premium-button a,
+  .premium-button span,
+  .premium-button > *,
+  a.premium-button,
+  button.premium-button {
+    color: #000000 !important;
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%) !important;
+  }
+
+  .premium-button:hover,
+  .premium-button:hover a,
+  .premium-button:hover span,
+  .premium-button:hover > *,
+  a.premium-button:hover,
+  button.premium-button:hover {
+    color: #000000 !important;
+    background: linear-gradient(135deg, #ffa500 0%, #ffd700 100%) !important;
   }
 
   /* Respect reduced motion preferences */

@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
@@ -34,17 +33,8 @@ export function Header() {
 
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-3 group">
-          <div className="relative w-10 h-10 md:w-12 md:h-12">
-            <Image
-              src="/logo-watermark.png"
-              alt="Angel K Logo"
-              fill
-              className="object-contain group-hover:scale-105 transition-transform duration-300"
-              priority
-            />
-          </div>
           <span className="font-serif text-xl md:text-2xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300">
-            Angel K
+            Angel Kellogg
           </span>
         </Link>
 
@@ -80,9 +70,17 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button asChild className="premium-button rounded-xl px-6 py-2 font-semibold">
-            <Link href="/join">Join</Link>
-          </Button>
+          <Link
+            href="/join"
+            className="inline-flex items-center justify-center rounded-xl px-6 py-2 font-semibold transition-all duration-300 hover:scale-105"
+            style={{
+              background: "linear-gradient(135deg, #ffd700 0%, #ffa500 100%)",
+              color: "#000000",
+              boxShadow: "0 4px 16px rgba(255, 215, 0, 0.3)",
+            }}
+          >
+            Join
+          </Link>
         </div>
 
         {/* Mobile Navigation */}
@@ -106,9 +104,18 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-6 border-t border-border/20">
-                <Button asChild className="premium-button w-full py-3 font-semibold">
-                  <Link href="/join">Join</Link>
-                </Button>
+                <Link
+                  href="/join"
+                  className="inline-flex items-center justify-center w-full py-3 font-semibold rounded-xl transition-all duration-300 hover:scale-105"
+                  style={{
+                    background: "linear-gradient(135deg, #ffd700 0%, #ffa500 100%)",
+                    color: "#000000",
+                    boxShadow: "0 4px 16px rgba(255, 215, 0, 0.3)",
+                  }}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Join
+                </Link>
               </div>
             </div>
           </SheetContent>
